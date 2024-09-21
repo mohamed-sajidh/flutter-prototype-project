@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:testing_widgets/customDropdown.dart';
+import 'package:testing_widgets/internet_connection/internet_connection.dart';
 import 'package:testing_widgets/searchBar.dart';
 
 void main() {
@@ -13,12 +15,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: HomePage(),
+      home: const InternetHomePage(),
     );
   }
 }
