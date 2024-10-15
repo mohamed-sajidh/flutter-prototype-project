@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/get_instance.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:testing_widgets/connection_checker/checker_home_page.dart';
+import 'package:testing_widgets/connection_checker/internet_checker_app.dart';
 import 'package:testing_widgets/customDropdown.dart';
 import 'package:testing_widgets/custom_appbar/custom_main_class.dart';
 import 'package:testing_widgets/internet_connection/internet_connection.dart';
@@ -18,8 +20,10 @@ import 'package:testing_widgets/stepper/stepper.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  Get.put(ConnectivityController());
-  runApp(const MyApp());
+  // Get.put(ConnectivityController());
+  runApp(
+    InternetCheckerApp(child: const MyApp()),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -35,7 +39,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const InternetPage(),
+      home: const CheckerHomePage(),
     );
   }
 }
