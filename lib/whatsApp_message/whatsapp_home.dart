@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:testing_widgets/whatsApp_message/call_number.dart';
-import 'package:testing_widgets/whatsApp_message/phone_dialer.dart';
 import 'package:testing_widgets/whatsApp_message/whatsapp_service.dart';
 
 class WhatsappHome extends StatelessWidget {
