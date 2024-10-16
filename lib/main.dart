@@ -11,12 +11,14 @@ import 'package:testing_widgets/internet_connection_latest/connectivity_controll
 import 'package:testing_widgets/internet_connection_latest/home_page.dart';
 import 'package:testing_widgets/order_tracking/TimeLineTile/order_tracking_timeline.dart';
 import 'package:testing_widgets/order_tracking/order_tracking_demo.dart';
+import 'package:testing_widgets/real_estate_footer/real_footer_main_page.dart';
 import 'package:testing_widgets/searchBar.dart';
 import 'package:testing_widgets/search_options/home_page.dart';
 import 'package:testing_widgets/search_options/search_bar.dart';
 import 'package:testing_widgets/searchbar/search_screen.dart';
 import 'package:testing_widgets/stepper/cart_page.dart';
 import 'package:testing_widgets/stepper/stepper.dart';
+import 'package:testing_widgets/whatsApp_message/whatsapp_home.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -39,7 +41,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const CheckerHomePage(),
+      home: const WhatsappHome(),
     );
   }
 }
