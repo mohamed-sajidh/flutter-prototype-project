@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:testing_widgets/connection_checker/internet_checker_app.dart';
-import 'package:testing_widgets/profile/mortage.dart';
-import 'package:testing_widgets/profile/real_estate_profile.dart';
-import 'package:testing_widgets/whatsApp_message/vibration_checking_screen.dart';
+import 'package:testing_widgets/push_notification/local_notification_service.dart';
+import 'package:testing_widgets/push_notification/notification_main.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // Get.put(ConnectivityController());
+  LocalNotificationService localNotificationService =
+      LocalNotificationService();
+
+  await localNotificationService.setup();
+
   runApp(
     InternetCheckerApp(child: const MyApp()),
   );
@@ -26,7 +29,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MortgagePage(),
+      home: const NotificationMain(),
     );
   }
 }
