@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:testing_widgets/billing_app_ui/billing_ui.dart';
 import 'package:testing_widgets/connection_checker/internet_checker_app.dart';
 import 'package:testing_widgets/push_notification/local_notification_service.dart';
-import 'package:testing_widgets/push_notification/notification_main.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const NotificationMain(),
+      home: const BillingLogin(),
     );
   }
 }
